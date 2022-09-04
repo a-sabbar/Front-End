@@ -1,0 +1,116 @@
+/*
+
+background-color: rgba(16 18 27 / 40%)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+.back_gr {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+.back_gr video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.continer{
+    max-width: 1250px;
+    height: 860px;
+    background-color: rgba(16 18 27 / 40%);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+.continer .nav_bar
+{
+    /* background: goldenrod; */
+    width: 1250px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(55, 55, 55);
+}
+
+/*****************************left bar**************************/
+.left-bar{
+    /* background-color: aqua; */
+    width: 100px;
+    height: 100%;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+.left-bar span{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0px 7px;
+}
+.left-bar .red{
+    background: #F96057;
+}
+.left-bar .yellow{
+    background: #F8CE52;
+}
+.left-bar .green{
+    background: #5FCF65;
+}
+/*****************************right bar**************************/
+.right-bar{
+    /* background-color: rgb(93, 192, 147); */
+    width: 80%;
+    height: 100%;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.right-bar .min-bar{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.right-bar .min-bar li{
+    /* margin-left: 30px; */
+    cursor: pointer;
+    padding: 0px 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+/*******************************************************/
+/*****************************search bar**************************/
+.right-bar .search{
+    height: 75%;
+    width: 30%;
+    background: #14162B;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+.right-bar .search p{
+ margin-left: 15px;
+ color: #ffffff84;
+}
+
+
+
+/*******************************************************/
