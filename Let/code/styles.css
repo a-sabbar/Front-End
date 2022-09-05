@@ -42,20 +42,19 @@ body{
 }
 .continer .nav_bar
 {
-    /* background: goldenrod; */
-    width: 1250px;
+    width: 100%;
     height: 50px;
     display: flex;
-    justify-content: space-between;
     border-bottom: 1px solid rgb(55, 55, 55);
+}
+.continer .nav_bar > *
+{
+    margin:0px 25px;
 }
 
 /*****************************left bar**************************/
 .left-bar{
-    /* background-color: aqua; */
-    width: 100px;
     height: 100%;
-    margin-left: 30px;
     display: flex;
     align-items: center;
 }
@@ -76,41 +75,127 @@ body{
 }
 /*****************************right bar**************************/
 .right-bar{
-    /* background-color: rgb(93, 192, 147); */
-    width: 80%;
+    /* background: #F8CE52; */
     height: 100%;
     font-size: 15px;
     display: flex;
     align-items: center;
 }
+
+/*****************************min bar**************************/
 .right-bar .min-bar{
     display: flex;
     height: 100%;
     align-items: center;
 }
-.right-bar .min-bar li{
-    /* margin-left: 30px; */
-    cursor: pointer;
-    padding: 0px 20px;
+.right-bar .min-bar a{
+    width: 80px;
+    height: 100%;
+    margin: 0px 15px;
     text-decoration: none;
-    color: #FFFFFF;
+    color: #f9fafbac;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s;
 }
-/*******************************************************/
+.right-bar .min-bar a:first-of-type
+{
+    color: #f9fafb;
+    border-bottom: 2px solid #FFFFFF;
+}
+.right-bar .min-bar a:first-of-type span
+{
+    display: none;
+}
+.right-bar .min-bar a span{
+    width: 5px;
+    height: 5px;
+    background:#3A6DF0;
+    position: absolute;
+    border-radius: 50%;
+    top: 20%;
+    right: 0;
+}
+.right-bar .min-bar a:hover {
+    color: #f9fafb;
+    border-bottom: 2px solid #FFFFFF;
+}
 /*****************************search bar**************************/
-.right-bar .search{
+ .right-bar .search{
     height: 75%;
-    width: 30%;
     background: #14162B;
     border-radius: 5px;
     display: flex;
     align-items: center;
     padding-left: 15px;
 }
-.right-bar .search p{
- margin-left: 15px;
- color: #ffffff84;
+.right-bar .search input{
+    width: 200px;
+    height: 100%;
+    background: #14162B;
+    font-size: 16px;
+    border: none;
+    font-weight: 600;
+    padding: 15px;
+    color: #FFFFFF;
 }
 
+input:focus {
+    outline:none;
+}
 
+/*******************************************************/
+/*****************************icons bar**************************/
+.right-bar .icons{
+    margin-left: 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.right-bar .icons i{
+    color: #F9FAFB;
+    font-size: 20px;
+}
+.right-bar .icons > *{
+    cursor: pointer;
+    margin: 0px 15px;
+}
+.right-bar .icons span{
+    width:15px;
+    height: 15px;
+    background:#3A6DF0;
+    position: absolute;
+    border-radius: 50%;
+    top: 10px;
+    right: -7px;
+    color: #FFFFFF;
+    font-size:9px;
+    text-align: center;
+
+}
+.right-bar .icons .notif, .cloud{
+    width:20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.right-bar .icons .User{
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-bar .icons .User img{
+object-fit: cover;
+}
 
 /*******************************************************/

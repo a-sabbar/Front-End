@@ -23,19 +23,32 @@
             </div>
             <div class="right-bar">
                 <ul class="min-bar" style="list-style: none;">
-                    <li>Apps</li>
-                    <li>Your work</li>
-                    <li>Discover</li>
-                    <li>Market</li>
+                    <a href="#" id="app" onclick="myFunction()">Apps<span id="notif-Apps"></span></a>
+                    <a href="#"id="work"style=" padding: 0 !important;" onfocus="myFunction1()">Your work<span id="notif-work"></span></a>
+                    <a href="#"id="Discover" onfocus="myFunction2()">Discover<span id="notif-Discover"></span></a>
+                    <a href="#"id="Market" onfocus="myFunction3()">Market<span id="notif-Market"></span></a>
                 </ul>
                 <div class="search">
-                <img src="../src/search.png" alt="" style="width:20px;">
-                   <p>Search</p>
+                    <img src="../src/search.png" alt="" style="width:20px;">
+                    <input type="text" placeholder="Srearch">
                 </div>
                 <div class="icons">
+                    <div class="notif" onclick="icon_notif()">
+                        <span id="notif-notif">3</span>
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <div class="cloud" onclick="cloud()">
+                        <span id="notif-cloud">2</span>
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <div class="User">
+                        <img src="../src/user.jpg" style="width: 27px; height: 27px;" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="./code.js"></script>
+    <script src="https://kit.fontawesome.com/66c64375dc.js" crossorigin="anonymous"></script>
 </body>
 </html>
