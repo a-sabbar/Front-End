@@ -8,6 +8,15 @@ background-color: rgba(16 18 27 / 40%)
     padding: 0;
     box-sizing: border-box;
 }
+
+
+li{
+    list-style: none;
+}
+a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
 body{
     display: flex;
     justify-content: center;
@@ -28,6 +37,7 @@ body{
     height: 100%;
     object-fit: cover;
 }
+/***************************** continer**************************/
 
 .continer{
     max-width: 1250px;
@@ -45,7 +55,7 @@ body{
     width: 100%;
     height: 50px;
     display: flex;
-    border-bottom: 1px solid rgb(55, 55, 55);
+    border-bottom: 1px solid rgba(48, 51, 67, 0.4);
 }
 .continer .nav_bar > *
 {
@@ -54,6 +64,7 @@ body{
 
 /*****************************left bar**************************/
 .left-bar{
+    min-width: 10%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -75,10 +86,10 @@ body{
 }
 /*****************************right bar**************************/
 .right-bar{
-    /* background: #F8CE52; */
     height: 100%;
     font-size: 15px;
     display: flex;
+    margin-left: 100px;
     align-items: center;
 }
 
@@ -86,13 +97,12 @@ body{
 .right-bar .min-bar{
     display: flex;
     height: 100%;
-    align-items: center;
+    margin: 0 55px;
 }
 .right-bar .min-bar a{
     width: 80px;
     height: 100%;
-    margin: 0px 15px;
-    text-decoration: none;
+    padding: 0px 30px;
     color: #f9fafbac;
     position: relative;
     display: flex;
@@ -132,7 +142,7 @@ body{
     padding-left: 15px;
 }
 .right-bar .search input{
-    width: 200px;
+    min-width: 20%;
     height: 100%;
     background: #14162B;
     font-size: 16px;
@@ -140,13 +150,18 @@ body{
     font-weight: 600;
     padding: 15px;
     color: #FFFFFF;
+    border-radius: 5px;
 }
 
 input:focus {
     outline:none;
 }
-
 /*******************************************************/
+.right-continer{
+    grid-area: right;
+    width: 80%;
+    height: calc(100% - 60px);
+}
 /*****************************icons bar**************************/
 .right-bar .icons{
     margin-left: 15px;
@@ -168,12 +183,14 @@ input:focus {
     height: 15px;
     background:#3A6DF0;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     top: 10px;
     right: -7px;
     color: #FFFFFF;
     font-size:9px;
-    text-align: center;
 
 }
 .right-bar .icons .notif, .cloud{
@@ -198,4 +215,251 @@ input:focus {
 object-fit: cover;
 }
 
-/*******************************************************/
+/***************************  min continer****************************/
+
+
+.mini-continer
+{
+    display: flex;
+    width: inherit;
+    height: calc(100% - 50px);
+}
+.mini-continer .left-continer
+{
+    grid-area: left;
+    width: 22.5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-right: 2px solid rgba(48, 51, 67, 0.4);
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+.mini-continer .left-continer .apps
+{
+    width: calc(100% - 20px);
+    position: relative;
+    margin: 20px;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+}
+.mini-continer .left-continer .apps ul
+{
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+.mini-continer .left-continer .apps li
+{
+    margin-right: 2px;
+    padding: 10px 0;
+    position: relative;
+    display: flex; 
+    align-items: center;
+}
+.mini-continer .left-continer .apps li:hover
+{
+    background: rgba(16 18 27 / 40%);
+    border-radius: 5px;
+}
+.mini-continer .left-continer .apps li > *
+{
+    margin-left: 15px;
+    font-size: 14px;
+}
+.mini-continer .left-continer .apps li span
+{
+    width:20px;
+    height: 20px;
+    background:#3A6DF0;
+    position: absolute;
+    border-radius: 50%;
+    font-size:9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top :22%;
+    right: 10px;
+}
+
+/**********************  right-continer   **********************/
+
+/**********************  right-continer   barside **********************/
+.right-continer .barside{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(48, 51, 67, 0.4);
+    
+}
+.right-continer .barside span{
+    margin-left: 50px;
+    width: 50%;
+}
+.right-continer .barside ul{
+    height: 100%;
+    width: 50%;
+    margin-right: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.right-continer .barside ul li{
+    cursor: pointer;
+    height: 100%;
+    padding:  0 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.right-continer .barside ul li:first-of-type{
+    color: #FFFFFF !important;
+    border-bottom:3px solid #FFFFFF;
+}
+.right-continer  .barside ul li{
+    color: #f9fafbac;
+}
+
+.right-continer  .barside ul li:hover{
+    color: #FFFFFF !important;
+    border-bottom:3px solid #FFFFFF;
+}
+
+/************************ content     ***************************/
+
+.right-continer .content
+{
+    width: 100%;
+    height: 100%;
+    padding: 20px 30px;
+    background: rgba(16 18 27 / 40%);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.right-continer .content .head
+{
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png"), linear-gradient(to right top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+    height: 35%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+.right-continer .content .head p 
+{
+    max-width:45%;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 16px 0px;
+    line-height: 1.7em;
+    color: #ebecec;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.right-continer .content .head button
+{
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    background: #3A6DF0;
+    font-weight: 500;
+    font-size: 17px;
+    color: #FFFFFF;
+}
+
+
+/**************   Installed ***********************/
+
+
+.right-continer .content .Installed {
+    margin-bottom: 30px;
+}
+.right-continer .content .Installed h3{
+    margin-bottom: 30px;
+}
+
+.right-continer .content .Installed  ul
+{
+    background: rgb(146 151 179 / 13%);
+    border-radius: 10px;
+}
+.right-continer .content .Installed  ul li:hover
+{
+    background: rgba(16 18 27 / 40%);
+}
+.right-continer .content .Installed  ul li
+{   
+    cursor: pointer;
+    border-radius: 10px;
+    padding:15px 30px;
+    padding-right: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.right-continer .content .Installed  ul li h4
+{
+    width: 40%;
+    
+}
+.right-continer .content .Installed  ul li p
+{
+    position: relative;
+    font-size: 13px;
+    font-weight: 600;
+    width: 35%;
+}
+.right-continer .content .Installed  ul li p::before
+{
+    position: absolute;
+    content: "";
+    margin-right: 5px;
+    width: 7px;
+    height: 7px;
+    background: #5FCF65;
+    border-radius: 50%;
+    top:37%;
+    left: -25px;
+}
+.right-continer .content .Installed  ul li .open
+{
+    /* background: #5FCF65; */
+    position: relative;
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.right-continer .content .Installed  ul li .open button
+{
+    padding: 5px 25px;
+    background: transparent;
+    border-radius: 30px;
+    border: 1px solid #FFFFFF;
+    color: #f9fafb;
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 15px;
+    cursor: pointer;
+    
+}
+.right-continer .content .Installed  ul li .open i
+{
+    cursor: pointer;
+    font-size: 20px;
+}
+/********************* plan   ********************/
+
