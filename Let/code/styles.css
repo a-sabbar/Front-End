@@ -20,9 +20,12 @@ a{
 body{
     display: flex;
     justify-content: center;
+    align-items: center;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: #FFFFFF;
+    width: 100vw;
+    height: 100vh;
 }
 .back_gr {
     position: fixed;
@@ -44,10 +47,6 @@ body{
     height: 860px;
     background-color: rgba(16 18 27 / 40%);
     margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 10px;
 }
 .continer .nav_bar
@@ -160,7 +159,6 @@ input:focus {
 .right-continer{
     grid-area: right;
     width: 80%;
-    height: calc(100% - 60px);
 }
 /*****************************icons bar**************************/
 .right-bar .icons{
@@ -221,14 +219,14 @@ object-fit: cover;
 .mini-continer
 {
     display: flex;
-    width: inherit;
-    height: calc(100% - 50px);
+    width: 100%;
+    max-height: calc(100% - 51px);
 }
 .mini-continer .left-continer
 {
     grid-area: left;
     width: 22.5%;
-    height: 100%;
+    max-height: 100%;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
@@ -245,9 +243,10 @@ object-fit: cover;
     width: calc(100% - 20px);
     position: relative;
     margin: 20px;
-    margin-right: 0;
+    margin-bottom: 0px;
     display: flex;
     flex-direction: column;
+    max-height: 100%;
 }
 .mini-continer .left-continer .apps ul
 {
@@ -335,22 +334,22 @@ object-fit: cover;
 .right-continer .content
 {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 54px);
     padding: 20px 30px;
     background: rgba(16 18 27 / 40%);
     overflow-y: scroll;
     overflow-x: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none;  
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+    display: block;
+
+    
 }
 .right-continer .content .head
 {
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png"), linear-gradient(to right top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
     height: 35%;
-    padding: 40px;
+    padding: 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -359,11 +358,11 @@ object-fit: cover;
 }
 .right-continer .content .head p 
 {
-    max-width:45%;
+    max-width:60%;
     font-weight: 600;
     font-size: 14px;
-    margin: 16px 0px;
-    line-height: 1.7em;
+    margin: 30px 10px;
+    line-height: 25px;
     color: #ebecec;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -385,7 +384,7 @@ object-fit: cover;
 
 
 .right-continer .content .Installed {
-    margin-bottom: 30px;
+    margin: 30px 30px;
 }
 .right-continer .content .Installed h3{
     margin-bottom: 30px;
@@ -413,7 +412,6 @@ object-fit: cover;
 .right-continer .content .Installed  ul li h4
 {
     width: 40%;
-    
 }
 .right-continer .content .Installed  ul li p
 {
@@ -436,7 +434,6 @@ object-fit: cover;
 }
 .right-continer .content .Installed  ul li .open
 {
-    /* background: #5FCF65; */
     position: relative;
     width: 25%;
     display: flex;
@@ -445,7 +442,7 @@ object-fit: cover;
 }
 .right-continer .content .Installed  ul li .open button
 {
-    padding: 5px 25px;
+    padding: 8px 20px;
     background: transparent;
     border-radius: 30px;
     border: 1px solid #FFFFFF;
@@ -463,3 +460,52 @@ object-fit: cover;
 }
 /********************* plan   ********************/
 
+.plan{
+
+    margin: 30px 30px;
+}
+
+.plan .grid
+{
+    margin-top: 20px;
+    /* padding: 20px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.grid > *{
+    border-radius: 20px;
+    padding: 20px;
+    background: rgb(146 151 179 / 13%);
+}
+.grid > * h3{
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+}
+.grid > * p{
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+    font-weight: 400;
+   font-size: 13px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid gray;
+}
+.grid > * i{
+    cursor: pointer;
+}
+
+.grid > * button{
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 40%;
+    background: #3A6DF0;
+    padding: 5px 20px;
+    border-radius: 30px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 700;
+}
